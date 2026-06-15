@@ -1,13 +1,29 @@
 # Maven build
 target/
 
-# TestNG reports ✅ (IMPORTANT)
+# TestNG reports
 test-output/
 
-# Eclipse
+# Eclipse files
 .classpath
 .project
 .settings/
 
 # Logs
 *.log
+
+# Compiled class files
+*.class
+
+# Archive files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Crash logs
+hs_err_pid*
+replay_pid*
