@@ -1,5 +1,7 @@
 # Maven build
+bin/
 target/
+
 
 # TestNG reports
 test-output/
