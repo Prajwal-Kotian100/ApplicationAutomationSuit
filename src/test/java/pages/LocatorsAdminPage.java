@@ -11,9 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LocatorsAdminPage {
 
 	WebDriver driver;
+	WebdriverWait wait;
 
 	public LocatorsAdminPage(WebDriver driver) {
 		this.driver = driver;
+		this.wait = new WebdriverWait(driver, Duration.ofSeconds(20));
 	}
 
 	// ✅ Locators
@@ -30,12 +32,14 @@ public class LocatorsAdminPage {
 	// ✅ Actions
 
 	public void openAdmin() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(sideSearch));
 		driver.findElement(sideSearch).sendKeys("Admin");
 		driver.findElement(sideSearch).sendKeys(Keys.ENTER);
-		driver.findElement(clickAdm).click();
+		wait.until(ExpectedConditions.elementToBeClickable(clickAdm)).click();
 	}
 
 	public void enterDetails(String username, String userRole, String employeeName, String status) {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
 		driver.findElement(usernameField).clear();
 		driver.findElement(usernameField).sendKeys(username);
 		driver.findElement(role).click();
@@ -69,6 +73,7 @@ public class LocatorsAdminPage {
 	}
 
 	public boolean isFieldsCleared() {
+		ait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
 		String value = driver.findElement(usernameField).getAttribute("value");
 		return value == null || value.isEmpty();
 	}
