@@ -15,7 +15,7 @@ public class LocatorsAdminPage {
 
 	public LocatorsAdminPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebdriverWait(driver, Duration.ofSeconds(20));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 
 	// ✅ Locators
