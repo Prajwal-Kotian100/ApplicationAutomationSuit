@@ -25,7 +25,7 @@ public class LocatorsAdminPage {
 	By stat = By.xpath("//label[text()='Status']/parent::div/following-sibling::div/div/div/descendant::i");
 	By searchBtn = By.xpath("//button[normalize-space()='Search']");
 	By resetBtn = By.xpath("//button[normalize-space()='Reset']");
-	By resultTable = By.xpath("//span[contains(normalize-space(), 'Records Found')]");
+	By resultTable = //span[contains(normalize-space(), 'Found')];
 
 	// ✅ Actions
 
