@@ -73,7 +73,7 @@ public class LocatorsAdminPage {
 	}
 
 	public boolean isFieldsCleared() {
-		ait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
 		String value = driver.findElement(usernameField).getAttribute("value");
 		return value == null || value.isEmpty();
 	}
