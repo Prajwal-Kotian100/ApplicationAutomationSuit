@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LocatorsAdminPage {
 
 	WebDriver driver;
-	WebdriverWait wait;
+	WebDriverWait wait;
 
 	public LocatorsAdminPage(WebDriver driver) {
 		this.driver = driver;
